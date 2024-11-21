@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jumpscare - Jeff The Killer</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background-color: black;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        img {
+            position: absolute;
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;
+            opacity: 1;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        #message {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 30px;
+            font-weight: bold;
+            animation: fadeInText 1.5s ease-in-out;
+            display: none;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        @keyframes fadeInText {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Imagem do Jeff the Killer -->
+    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a3/Jeff_the_Killer.jpg/220px-Jeff_the_Killer.jpg" alt="Jeff the Killer">
+
+    <!-- Mensagem após o jumpscare -->
+    <div id="message">Você caiu na minha pegadinha ;D yay</div>
+
+    <!-- Som aterrorizante -->
+    <audio id="sound" autoplay>
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+        // Função para redirecionar após 5 segundos (tempo de jumpscare)
+        setTimeout(function() {
+            window.location.href = "https://link.brawlstars.com/en/?action=voucher&code=ab9cf7c2-45f8-4012-ad38-dfe8b1747c3b"; // link verdadeiro
+        }, 5000);
+
+        // Exibir a mensagem após 1.5 segundos (tempo de fade-in)
+        setTimeout(function() {
+            document.getElementById('message').style.display = "block";
+        }, 1500);
+    </script>
+
+</body>
+  </html>
